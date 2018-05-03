@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: CreateTablePessoa
+      author: nois
+      changes:
+        - createTable:
+            tableName: person
+            columns:
+              - column:
+                  name: id
+                  type: varchar(36)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(50)
+              - column:
+                  name: last_name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: state
+                  type: char(2)

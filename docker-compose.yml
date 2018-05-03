@@ -1,0 +1,12 @@
+version: '2'
+services:
+  postgres-treinamento:
+    image: postgres
+    ports:
+      - 9876:5432
+    volumes:
+      - ./storage/database:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ewqiop321
+      POSTGRES_DB: treinamento
